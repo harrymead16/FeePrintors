@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact Us page-layout | Fee Printors 2.0 </title>
+    <meta name="description" content="Get in touch with Fee Printors for inquiries, support, or partnership opportunities. We're here to help." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body data-page="Contact.html">
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <div class="contact-container">
+      <header>
+        <img src="images/image.png" alt="Logo" style="height: 8rem;">
+        <h1>Contact Fee Printors</h1>
+        <p>Have any questions or inquiries? Reach out to us, and we'll be happy to assist you!</p>
+      </header>
+
+      <!-- Contact Form Section -->
+      <section class="contact-form">
+        <h2>Get in Touch</h2>
+        <form action="/submit_contact_form" method="POST" class="form">
+          <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+          <textarea id="message" name="message" rows="4" required placeholder="Enter your message here"></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+      </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- External JS files -->
+    <script src="/js/common.js"></script>
+
+    <!-- Load common navbar and footer logic -->
+    <script src="/js/menu.js"></script>
+    <script src="/js/navbar.js"></script>
+  </body>
+</html>

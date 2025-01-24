@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/style.css'>
+    <title>Checkout page-layout | Fee Printors 2.0 </title>
+    <meta name="description" content="Get in touch with BB-Stoned Zone for questions about cannabis products, delivery options, and more. We're here to help with all your cannabis needs in Thailand." />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body data-page="Checkout.html">
+    <div class="message-bar">
+      <p class="message"></p>
+    </div>
+    <!-- Navbar -->
+    <div id="navbar-placeholder">
+      <span id="cart-count" class="cart-count">0</span>
+    </div>
+    <h1 class="checkout-page__title">My Shopping Cart</h1>
+    <div class="checkout-page__layout">
+      <div class="checkout-page__headings">
+        <span class="checkout-page__heading">Strain</span>
+        <span class="checkout-page__heading">Weight</span>
+        <span class="checkout-page__heading">Quantity</span>
+        <span class="checkout-page__heading">Price</span>
+        <span class="checkout-page__heading">Remove</span>
+      </div>
+      <div class="checkout-page__section checkout-page__cart">
+        <div class="checkout-page__product-list">
+          <!-- Dynamic Product Items will be appended here -->
+        </div>
+      </div>
+      <!-- Totals Section -->
+      <div class="checkout-page__totals">
+        <span class="checkout-page__total-quantity"></span>
+        <span class="checkout-page__total-price"></span>
+      </div>
+      <!-- Contact Form Section -->
+      <div class="checkout-page__section checkout-page__contact-form">
+        <h2 class="checkout-page__subtitle">Contact Information</h2>
+        <div class="checkout-page__form-row">
+          <div class="checkout-page__form-group">
+            <input type="text" id="name" class="checkout-page__input" placeholder="Name">
+          </div>
+          <div class="checkout-page__form-group">
+            <input type="tel" id="tel" class="checkout-page__input" placeholder="Phone Number">
+          </div>
+          <div class="checkout-page__form-group">
+            <input type="text" id="contact" class="checkout-page__input" placeholder="Enter social media, or email" required>
+            <span class="info-icon" onclick="openModal()">&#9432;</span>
+          </div>
+          <!-- Modal -->
+          <div id="infoModal" class="modal">
+            <div class="checkout-page__modal" id="checkoutPageModal">
+              <div class="checkout-page__modal-content">
+                <span class="checkout-page__modal-close" onclick="closeModal()">&times;</span>
+                <p class="checkout-page__modal-text">Why We ask for your Social media? <Br> the main reason is so that we can contact you <br> regarding payment options, especially for customers who prefer to pay by card or bank transfer. </p>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-page__form-group">
+            <select id="payment-type" class="checkout-page__select">
+              <option value="cash">Cash on Delivery</option>
+              <option value="card">Card Payment</option>
+            </select>
+          </div>
+        </div>
+        <div class="checkout-page__form-row">
+          <div class="checkout-page__form-group">
+            <input type="text" id="address" class="checkout-page__input" placeholder="Street Address including Postcode">
+          </div>
+          <div class="checkout-page__form-group">
+            <input type="text" id="residence" class="checkout-page__input" placeholder="Hotel/Residence Name">
+          </div>
+          <div class="checkout-page__form-group">
+            <select id="region" class="checkout-page__select">
+              <option value="bangkok">Bangkok</option>
+              <option value="phuket">Phuket</option>
+              <option value="chiang-mai">Chiang Mai</option>
+              <option value="pattaya">Pattaya</option>
+              <option value="krabi">Krabi</option>
+              <option value="ayutthaya">Ayutthaya</option>
+              <option value="chiang-rai">Chiang Rai</option>
+              <option value="chonburi">Chonburi</option>
+              <option value="kanchanaburi">Kanchanaburi</option>
+              <option value="ko-samui">Ko Samui</option>
+              <option value="lampang">Lampang</option>
+              <option value="loei">Loei</option>
+              <option value="nakhon-ratchasima">Nakhon Ratchasima</option>
+              <option value="nakhon-si-thammarat">Nakhon Si Thammarat</option>
+              <option value="pai">Pai</option>
+              <option value="phetchaburi">Phetchaburi</option>
+              <option value="rayong">Rayong</option>
+              <option value="samut-prakan">Samut Prakan</option>
+              <option value="sukhothai">Sukhothai</option>
+              <option value="surat-thani">Surat Thani</option>
+              <option value="udon-thani">Udon Thani</option>
+              <option value="uthai-thani">Uthai Thani</option>
+              <option value="nong-khai">Nong Khai</option>
+              <option value="phitsanulok">Phitsanulok</option>
+              <option value="hua-hin">Hua Hin</option>
+              <!-- Add other regions as needed -->
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Finalize Checkout Section -->
+      <div class="checkout-page__thanks-message"> Thanks for filling out all the details! To get your ganja order processed, please press the finalize checkout button below. This will send a message to our team, who will get back to you as soon as they can. </div>
+      <button class="checkout-page__button" onclick="finalizeCheckout()">Finalize Checkout</button>
+    </div>
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    <!-- External JS files -->
+    <script src="/js/common.js"></script>
+    <!-- Load common navbar and footer logic -->
+    <script src="/js/menu.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/checkout.js"></script>
+  </body>
+</html>
